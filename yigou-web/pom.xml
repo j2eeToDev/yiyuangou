@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.tiandu</groupId>
+		<artifactId>yigou</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.tiandu</groupId>
+	<artifactId>yigou-web</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>yigou-web Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.tiandu</groupId>
+			<artifactId>yigou-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tiandu</groupId>
+			<artifactId>yigou-utils</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tiandu</groupId>
+			<artifactId>yigou-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	<!-- maven打成war包放到tomcat目录下，即可运行 -->
+	<build>
+		<finalName>一元购</finalName>
+		
+	</build>
+</project>
