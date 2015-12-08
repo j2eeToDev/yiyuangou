@@ -10,7 +10,7 @@
       http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- 注解扫描包 -->
-	<context:component-scan base-package="com.tiandu.yigou" />
+	<context:component-scan base-package="org.yigou.*" />
 
 	<!-- <context:component-scan /> -->
 	<!-- 扫描指定的包中的类上的注解，常用的注解有： -->
@@ -30,7 +30,7 @@
 	<mvc:annotation-driven />
 
 	<!-- 拦截器 -->
-	<!-- <mvc:interceptors> <bean class="com.phn.inteceptor" /> </mvc:interceptors> -->
+	<!-- <mvc:interceptors> <bean class="org.yigou.inteceptor" /> </mvc:interceptors> -->
 
 	<!-- 方案一 （二选一）表示不对静态资源如CSS、JS、HTML等进行拦截 -->
 	<!-- 当在web.xml 中 DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源,使用默认的servlet来响应请求 -->
