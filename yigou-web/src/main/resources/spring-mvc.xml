@@ -10,7 +10,7 @@
       http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- 注解扫描包 -->
-	<context:component-scan base-package="org.yigou.*" />
+	<context:component-scan base-package="org.yigou.controller,org.yigou.core" />
 
 	<!-- <context:component-scan /> -->
 	<!-- 扫描指定的包中的类上的注解，常用的注解有： -->
@@ -73,7 +73,7 @@
 					</property>
 				</bean>
 				<bean
-					class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+					class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
 					<property name="supportedMediaTypes">
 						<list>
 							<value>application/json;charset=UTF-8</value>
