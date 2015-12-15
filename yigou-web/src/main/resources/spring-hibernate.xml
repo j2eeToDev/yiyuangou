@@ -68,7 +68,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 		<!-- 自动扫描注解方式配置的hibernate类文件 -->
 		<property name="packagesToScan">
 			<list>
-				<value>org.yigou.*</value>
+				<value>org.yigou.model</value>
 			</list>
 		</property>
 	</bean>
