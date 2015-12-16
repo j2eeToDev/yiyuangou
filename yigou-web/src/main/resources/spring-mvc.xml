@@ -10,7 +10,7 @@
       http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<!-- 注解扫描包 -->
-	<context:component-scan base-package="org.yigou.controller,org.yigou.core" />
+	<context:component-scan base-package="org.yigou.controller,org.yigou.core,org.yigou.service.impl" />
 
 	<!-- <context:component-scan /> -->
 	<!-- 扫描指定的包中的类上的注解，常用的注解有： -->
@@ -57,8 +57,12 @@
 			</list>
 		</property>
 	</bean> -->
-
-
+	<bean 
+		class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"></bean>
+	<bean 
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean>
 	<!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">

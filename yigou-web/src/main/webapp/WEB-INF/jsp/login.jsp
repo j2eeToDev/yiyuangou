@@ -20,9 +20,10 @@
 <meta http-equiv="description" content="This is my page">
 
 </head>
-   
+   <script type="text/javascript">
+   </script>
 <body>
-	<form action="user/login" method="post">
+	<form action="user/login" method="post" accept="application/json">
 	<div>
 		UserName:<input type="text" name="userName" value="root"/> <br/>
 		PassWord:<input type="password" name="password" value="1111"/><br/> 

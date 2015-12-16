@@ -15,6 +15,11 @@ public class User {
 	private String userName;
 	private String password;
 	private int status;
+	
+	public User(){
+		
+	}
+	
 	public int get_id() {
 		return _id;
 	}

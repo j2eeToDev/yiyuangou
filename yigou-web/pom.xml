@@ -36,6 +36,11 @@
 			<artifactId>yigou-model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.tiandu</groupId>
+			<artifactId>yigou-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 	<!-- maven打成war包放到tomcat目录下，即可运行 -->
 	<build>

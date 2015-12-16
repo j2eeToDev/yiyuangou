@@ -105,6 +105,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 			<tx:method name="*" propagation="SUPPORTS" />
 		</tx:attributes>
 	</tx:advice>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	<aop:config>
 		<aop:pointcut id="transactionPointcut" expression="execution(* org.yigou.service..*Impl.*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />

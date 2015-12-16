@@ -17,6 +17,9 @@
         <dependent-module archiveName="yigou-model-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/yigou-model/yigou-model">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="yigou-service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/yigou-service/yigou-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/yigou-web/target/classes"/>
         <property name="context-root" value="一元购"/>
     </wb-module>
