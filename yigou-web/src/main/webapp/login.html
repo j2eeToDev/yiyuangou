@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+</head>
+<script type="text/javascript">
+    function register() {
+        $.ajax({     
+            url: "http://localhost:8080/yigou-web/member/register",
+            type: "post",
+            contentType: "application/json",
+            dataType: "json",
+            data: JSON.stringify({phone: "11112589635", password: "2222222"}),
+            success: function (data, status) {
+                alert("Data: " + data + "\nStatus: " + status);
+            },
+
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("error: " + XMLHttpRequest.status + "\nStatus: " + textStatus);
+            }
+        });
+    }
+</script>        
+
+<script type="text/javascript">
+    function changeImg() {
+        var imgSrc = $("#imgObj");
+        var src = imgSrc.attr("src");
+        imgSrc.attr("src", chgUrl(src));
+    }
+    //时间戳
+    //为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳
+    function chgUrl(url) {
+        var timestamp = (new Date()).valueOf();
+        if(url.indexOf("?")>=0){
+            url = url.substring(0,url.indexOf("?"));
+        }
+        url = url + "?timestamp=" + timestamp;
+
+        return url;
+    }
+</script>
+<br>
+<img src="http://localhost:8080/yigou-web/code/code" id="imgObj">
+<a href="#" onclick="changeImg()">换一张</a></td></tr></br>
+<input type="button" value="注册" onclick="register()" />
+</body>
+</html>
+

@@ -28,7 +28,7 @@
 		UserName:<input type="text" name="userName" value="root"/> <br/>
 		PassWord:<input type="password" name="password" value="1111"/><br/> 
 		status:<input type="text" name="status" value="0"/><br/> 
-		<input type="submit" id="loginBtn" value="Login" />
+		<input type="submit" id="loginBtn" value="登陆" />
 	</div>
 	</form>
 </body>

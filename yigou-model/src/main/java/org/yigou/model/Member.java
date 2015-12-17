@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="t_member")
@@ -32,7 +33,30 @@ public class Member {
 	private Date    birthday;
 	private int      role;
 	private String   publicItem;//公开项
-	
+	@Transient
+	private String selfInvalideCode; //网站内部验证码，不参加持久化
+	@Transient
+	private String phoneInvalideCode; //手机验证码，不参加持久化
+	@Transient
+	private String password; //密码，不参加持久化
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getSelfInvalideCode() {
+		return selfInvalideCode;
+	}
+	public void setSelfInvalideCode(String selfInvalideCode) {
+		this.selfInvalideCode = selfInvalideCode;
+	}
+	public String getPhoneInvalideCode() {
+		return phoneInvalideCode;
+	}
+	public void setPhoneInvalideCode(String phoneInvalideCode) {
+		this.phoneInvalideCode = phoneInvalideCode;
+	}
 	public int get_id() {
 		return _id;
 	}
