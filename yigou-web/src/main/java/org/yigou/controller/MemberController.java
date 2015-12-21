@@ -22,8 +22,7 @@ public class MemberController {
 		modelMap.addAttribute("object", member);
 		modelMap.addAttribute("success", true);
 		modelMap.addAttribute("msg", "注册成功");
-		 HttpSession session = req.getSession();
-	     System.out.println("member="+session.getId());
+		
 		return modelMap;
 	}
 }
