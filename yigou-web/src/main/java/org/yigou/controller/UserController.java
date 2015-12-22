@@ -44,7 +44,7 @@ public class UserController {
 	@RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
 	public ModelMap getCurrentUser(){
 		ModelMap mm = new ModelMap();
-		mm.addAttribute("success", false);
+		mm.addAttribute("success", true);
 		return mm;
 	}
 	
